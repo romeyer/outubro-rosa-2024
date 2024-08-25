@@ -1,0 +1,529 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.btn-instrucoes {
+    padding: 10px 20px;
+    border: 2px solid #d32f2f;
+    border-radius: 20px;
+    background-color: white;
+    color: #d32f2f;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-instrucoes:hover {
+    background-color: #f8d7da;
+}
+
+main {
+    flex: 1;
+    padding: 40px 0;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 40px;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+footer a {
+    color: #d32f2f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para a tela de login */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.login-form {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.error-message i {
+    margin-right: 10px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-prosseguir, .btn-avancar {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Espaçamento entre os botões */
+}
+
+.btn-prosseguir:hover, .btn-avancar:hover {
+    background-color: #b71c1c;
+}
+
+.btn-prosseguir:disabled, .btn-avancar:disabled {
+    background-color: #f8d7da;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.btn-voltar {
+    background-color: white;
+    color: #d32f2f;
+    padding: 12px 20px;
+    border: 2px solid #d32f2f;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #f8d7da;
+    color: #b71c1c;
+}
+
+.login-image {
+    flex: 1;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Estilos específicos para a tela de steps */
+.steps-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 80px;
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #d32f2f;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.step.active .step-number {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.step.active .step-label {
+    color: #d32f2f;
+}
+
+.steps-container::before, .steps-container::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #d32f2f;
+    margin: auto;
+}
+
+.steps-container::before {
+    margin-right: 20px;
+}
+
+.steps-container::after {
+    margin-left: 20px;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Alinhar os botões na coluna */
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #f8d7da;
+    cursor: not-allowed;
+}
+
+/* Estilo do formulário de Cadastro */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Estilo para o divisor visual */
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.validation-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.input-dropdown {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    appearance: none; /* Remove o estilo padrão do dropdown */
+    -webkit-appearance: none; /* Remove o estilo padrão do dropdown no Safari */
+    -moz-appearance: none; /* Remove o estilo padrão do dropdown no Firefox */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNNC43IDEyLjdMMCA4LjZMMS4zIDcuMmwgNiAzLjYgNi0zLjYgMS4zIDEuMkw4IDEyLjd6IiBmaWxsPSIjMDAwIi8+Cjwvc3ZnPgo=');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+.input-dropdown:focus {
+    border-color: #d32f2f;
+    outline: none;
+}
+
+.input-dropdown option {
+    padding: 12px;
+}
+
+/* Estilos específicos para a seleção de exames no step 3 */
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+fieldset div {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+
+label[for^="exame"] {
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo do campo de upload */
+input[type="file"] {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="file"] + small {
+    display: block;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Estilos das validações legais */
+.legal-validations {
+    margin-top: 20px;
+}
+
+.legal-validations div {
+    margin-bottom: 10px;
+}
+
+.legal-validations label {
+    font-size: 14px;
+    color: #333;
+}
+
+.legal-validations input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Estilo personalizado para os checkboxes */
+input[type="checkbox"] {
+    accent-color: #d32f2f; /* Cor vermelha para o checkbox */
+    width: 18px; /* Ajuste o tamanho do checkbox se necessário */
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Adicionando uma cor vermelha personalizada quando o checkbox estiver selecionado */
+input[type="checkbox"]:checked {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+    color: #ffffff;
+}
+
+/* Estilo para pré-visualização das imagens */
+.image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.image-preview .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.image-preview .remove-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.image-preview .remove-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Estilo para checkboxes e radios */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #3c3c3c; /* Vermelho */
+    border-radius: 50%; /* Mantém o formato de círculo para radio */
+    margin-right: 8px;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked {
+    background-color: #d50000; /* Preenche o círculo com vermelho quando selecionado */
+    border: 2px solid #d50000; /* Mantém a borda da cor vermelha */
+}
+
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.radio-group label span {
+    margin-left: 8px;
+}
+
+/* Estilos para o overlay de loading */
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #d32f2f; /* Utilizando a cor primária do site */
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loadingOverlay p {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+

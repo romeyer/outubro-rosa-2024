@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outubro Rosa 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <div class="header-content">
+                <button class="btn-instrucoes">Instruções</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="main-container" class="container">
+            <div id="login-container" class="login-container">
+                <div class="login-form">
+                    <h1>Bem-vindo</h1>
+                    <p>Por favor, insira seu e-mail corporativo para prosseguir.</p>
+                    <form id="loginForm">
+                        <input type="email" id="email" placeholder="Seu e-mail corporativo" required>
+                        <span id="error-message" style="display: none;" class="error-message">Email inválido!</span>
+                        <button type="submit" id="btn-prosseguir" class="btn-prosseguir" disabled>Prosseguir</button>
+                    </form>
+                </div>
+                <img src="img/imagem-login.png" alt="Imagem de Login" class="login-image">
+            </div>
+
+            <div id="steps-container" class="steps-container-wrapper" style="display: none;"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <img src="img/logo-footer.png" alt="Logo Footer" class="footer-logo">
+            <p>&copy; 2024 Empresa. Todos os direitos reservados.</p>
+            <a href="#">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <div id="loadingOverlay" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>Aguarde, estamos processando seus dados...</p>
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
